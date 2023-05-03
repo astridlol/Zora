@@ -12,10 +12,11 @@ export class Transform {
 	@Slash({ description: 'Change your nickname transformation settings' })
 	async transform(
 		@SlashChoice({ name: 'Normal - Disables the bot', value: 0 })
-		@SlashChoice({ name: 'Lowercase - Makes all usernames lowercase', value: 1 })
-		@SlashChoice({ name: 'Uppercase -  Makes all usernames uppercase', value: 2 })
-		@SlashChoice({ name: 'Spaces - Adds spaces between each letter', value: 3 })
-		@SlashChoice({ name: 'Alternating - Makes names look like tHiS', value: 4 })
+		@SlashChoice({ name: 'Lower case - Makes all usernames lowercase', value: 1 })
+		@SlashChoice({ name: 'Upper case -  Makes all usernames uppercase', value: 2 })
+		@SlashChoice({ name: 'Title case - Capitalizes the first letter of each word', value: 3 })
+		@SlashChoice({ name: 'Spaces - Adds spaces between each letter', value: 4 })
+		@SlashChoice({ name: 'Alternating - Makes names look like tHiS', value: 5 })
 		@SlashOption({
 			description: 'The transformation option',
 			name: 'option',

@@ -38,6 +38,13 @@ export default async function updateNickname(member: GuildMember): Promise<boole
 			newNickname = newNickname.toUpperCase();
 			break;
 		}
+		case TransformMode.TITLECASE: {
+			newNickname = newNickname
+				.split(' ')
+				.map((word) => word[0].toUpperCase() + word.substring(1))
+				.join(' ');
+			break;
+		}
 		case TransformMode.SPACES: {
 			let oldName = newNickname;
 
